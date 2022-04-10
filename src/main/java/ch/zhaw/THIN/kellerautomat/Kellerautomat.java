@@ -71,7 +71,7 @@ public class Kellerautomat {
             } catch (StackEmptyException e) {
                 currentState = failed;
             }
-        } else if (inputSymbol == 'e') {
+        } else if (inputSymbol == EPSILON) {
             result = stack.popAndReturn();
             currentState = q2;
         } else {
@@ -129,7 +129,7 @@ public class Kellerautomat {
     }
 
     private static void printWelcomeMessage() {
-        System.out.println("\n'Kellerautomat' is ready for input.");
+        System.out.println("\n'Kellerautomat' is ready.");
         System.out.println("You can always end the program with writing exit");
     }
 }
